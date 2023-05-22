@@ -4,4 +4,4 @@ Learn Training Courses.
 
 ## Learning Training courses Github Repo
     - 01. Web Development (Front End)
-    - 02. 
+    - 02. Go/Python/C/Java
