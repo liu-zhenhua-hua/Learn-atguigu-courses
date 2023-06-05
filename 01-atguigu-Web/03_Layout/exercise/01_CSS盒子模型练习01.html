@@ -16,7 +16,28 @@
             height: 200px;
             background-color: #bfa;
 
+            color:red;
+
+
+            /*
+                为border设置样式，下面三个样式属性必须设置
+            */
+            /* border-width: 20px;
+            border-color: red;
+            border-style: solid; */
+
+
+            /* 这一组,border属性的设置,没有设置border-color，但是样式里设置了color属性
+               此时border的color就使用color的属性值 
+            */
+            border-width: 20px;
+            border-style: solid; 
             
+            /*
+                border简写属性，通过该属性可以同时设置边框所有的相关样式，并且没有顺序要求
+            */
+
+            border: 10px orange solid;
         }
     </style>
 </head>
