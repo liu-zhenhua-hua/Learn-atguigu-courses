@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高度塌陷的最终解决方案</title>
+    <title>CSS 高度塌陷和外边距重叠</title>
     <style type="text/css">
-        /* ::after 利用这个::after */
-
         .box1{
-            border: 10px red solid;
-
+            width:200px;
+            height: 200px;
+            background-color: #bfa;
         }
 
         .box2{
-            width: 200px;
-            height: 200px;
-            background-color: #bfa;
-            float:left; /* 看看它的父元素 (.box1)，塌陷了 */
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 100px;
         }
 
-        .box1::after{
+        .clearfix::before,
+        .clearfix::after{
             content: '';
-            display: block;
+            display: table;
             clear:both;
         }
 
     </style>
 </head>
 <body>
-    <div class="box1">
+    <div class="box1 clearfix">
         <div class="box2"></div>
     </div>
 </body>
