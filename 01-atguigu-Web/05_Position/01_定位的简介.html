@@ -38,7 +38,10 @@
                     - 相对定位的特点:
                         1. 元素开启相对定位以后，如果不设置偏移量元素不会发生任何的变化
                         2. 相对定位是参照于元素在文档流中的位置进行定位的
-                        3. 
+                        3. 相对定位会提升元素的层级
+                        4. 相对定位不会使元素脱离文档流
+                        5. 相对定位不会改变元素的性质块还是块，行内还是行内
+                        
                 - 偏移量(offset)
                     - 当元素开启了定位以后，可以通过设置偏移量来设置元素的位置
                         top
@@ -61,6 +64,10 @@
 
             */
             
+            position: relative;
+            
+            left: 100px;
+
 
         }
 
@@ -73,8 +80,8 @@
     </style>
 </head>
 <body>
-    <div class="box1"></div>
-    <div class="box2"></div>
-    <div class="box3"></div>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
 </body>
 </html>
